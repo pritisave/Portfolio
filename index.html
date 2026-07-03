@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Priti Save — Lead Product Designer</title>
+  <meta name="description" content="Priti Save is a Lead Product Designer with 12+ years in fintech, lending, and payments." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@200;300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#" class="brand"><span class="ring"></span>priti save</a>
+      <nav class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#career">Experience</a>
+        <a href="#outside">Hobbies</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <a href="#contact" class="nav-cta">Let's talk <span class="cta-dot">●</span></a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cursor-following hint for project list -->
+  <div class="proj-hint-pop" id="projHint">View Case Study <span aria-hidden="true">&#8599;</span></div>
+
+  <!-- Case study mount -->
+  <div class="case" id="case"></div>
+
+  <!-- Site (home) -->
+  <div class="site" id="site">
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container">
+          <figure class="hero-portrait">
+            <img id="heroPortrait" alt="Priti" />
+            <figcaption id="heroRole">Product Designer</figcaption>
+          </figure>
+          <h1 class="hero-title">Hello, I&rsquo;m <span class="ital">Priti.</span></h1>
+          <p class="hero-intro" id="heroIntro"></p>
+          <div class="socials" id="heroSocials"></div>
+        </div>
+      </section>
+
+      <!-- Marquee -->
+      <div class="marquee"><div class="marquee-track" id="marqueeTrack"></div></div>
+
+      <!-- Milestones -->
+      <section class="section" id="milestones" style="display:none">
+        <div class="container">
+          <span class="eyebrow reveal">(01) Milestones</span>
+          <div class="ms-grid" id="msGrid"></div>
+        </div>
+      </section>
+
+      <!-- Selected work -->
+      <section class="section" id="work">
+        <div class="container">
+          <div class="proj-head">
+            <span class="eyebrow reveal" style="margin-bottom:0">(02) Selected work</span>
+          </div>
+          <h2 class="section-title proj-head-title reveal">Recent <span class="ital-serif">case studies</span></h2>
+          <div class="proj-list" id="projList"></div>
+        </div>
+      </section>
+
+      <!-- Career -->
+      <section class="section" id="career">
+        <div class="container career-grid">
+          <div class="career-side reveal">
+            <span class="eyebrow" style="margin-bottom:20px">(03) Career</span>
+            <h2 class="career-title">Where I've <span class="serif">Worked</span></h2>
+          </div>
+          <div class="exp-list" id="expList"></div>
+        </div>
+      </section>
+
+      <!-- Outside of work -->
+      <section class="section" id="outside">
+        <div class="container">
+          <span class="eyebrow reveal">(04) Outside of work</span>
+          <h2 class="section-title reveal">Glimpse of work</h2>
+          <div class="hob-grid" id="hobGrid"></div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section contact" id="contact">
+        <div class="container career-grid">
+          <div class="career-side reveal">
+            <span class="eyebrow" style="margin-bottom:20px">(05) Contact</span>
+            <h2 class="career-title">Get in <span class="serif">touch</span></h2>
+          </div>
+          <div class="exp-list contact-list reveal">
+            <div class="c-row"><span class="c-label">Email</span><a class="c-value" id="ciEmail" href="#">—</a></div>
+            <div class="c-row"><span class="c-label">Phone</span><a class="c-value" id="ciPhone" href="#">—</a></div>
+            <div class="c-row"><span class="c-label">Based in</span><span class="c-value" id="ciLoc">—</span></div>
+            <div class="c-row"><span class="c-label">Response time</span><span class="c-value">I respond within 48 hours.</span></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <span>© <span id="year">2026</span> Priti Save — Building products, not just pixels.</span>
+          <span>Available worldwide</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Image lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">&#8249;</button>
+    <img class="lightbox-img" id="lightboxImg" alt="" />
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">&#8250;</button>
+    <div class="lightbox-zoom" id="lightboxZoom">
+      <button id="zoomOut" aria-label="Zoom out">&minus;</button>
+      <button id="zoomReset" aria-label="Reset zoom">Reset</button>
+      <button id="zoomIn" aria-label="Zoom in">+</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>

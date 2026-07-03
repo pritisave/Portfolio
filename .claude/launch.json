@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "portfolio", "runtimeExecutable": "python3", "runtimeArgs": ["/Users/priti-save/Documents/Personal/New/.claude/serve.py"], "port": 4599 }
+  ]
+}

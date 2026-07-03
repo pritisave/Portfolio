@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:design-portfolio-pro-87.preview.emergentagent.com)",
+      "mcp__Claude_in_Chrome__navigate",
+      "Read(//private/tmp/**)",
+      "Bash(python3 -c ' *)",
+      "Bash(grep -viE 'flex|grid|text-|bg-|md:|gap|border|rounded|absolute|relative|hidden|object|aspect|group|transition|hover|font-|leading|tracking|neutral|overflow|w-|h-|px|py|mt|mb|space|items|justify|col|row|left|right|true|false|div|span|img|^p$|^a$')"
+    ]
+  }
+}
