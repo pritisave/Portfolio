@@ -10,7 +10,7 @@ const portfolio = {
   phone: "+91 9004809244",
   socials: [
     { label: "LinkedIn", href: "https://www.linkedin.com/in/priti-patil-save-584734111/" },
-    { label: "CV", href: "https://drive.google.com/file/d/1YiiKfXCH2JawWu9vs6pR3aITtC-85yyV/view?usp=sharing" },
+    { label: "CV", href: "https://drive.google.com/file/d/14alLKdGIbDZ1OHrkw6L9cHhIWWmYfNik/view?usp=sharing" },
   ],
 };
 
@@ -32,14 +32,14 @@ const projects = [
     cover: "assets/Case_study_1_hero.png",
     duration: "8 months", team: "Product & Engineer Head, 8 Engineers, 2 Designers, Business, Merchant Integrations",
     overview: "Flexmoney had grown to 35M+ customers and 60K+ merchants, with new lending partners joining the ecosystem regularly. But every new integration required a custom-built customer journey, resulting in inconsistent user experiences, longer delivery cycles, and increasing engineering effort.",
-    overviewImage: "assets/overview.png",
-    problem: "What once worked for a handful of partners no longer worked at scale. Every integration took months, **delaying revenue, losing business opportunities, increasing engineering costs and slowing expansion.**",
+    problem: "What once worked for a handful of partners no longer worked at scale. Every integration took months, **delaying revenue, losing business opportunities, increasing engineering costs and slowing expansion.**\n\n## Projected Impact\n\n| Metric | Before | After | Change |\n| --- | --- | --- | --- |\n| **Merchant go-live** | ~5 weeks | ~2.5 weeks | ~50% faster |\n| **Lender onboarding** | ~12 weeks | ~8 weeks | ~40% faster |\n| **Integration engineering effort** | ~15 person-days | ~6 person-days | ~60% less |",
     challenges: "How might we create a **scalable platform** that enables faster merchant and lender onboarding while maintaining a consistent customer experience?",
     why: "As a designer, I started by looking for design problems.\n\nI audited:\n* Merchant journeys\n* Lender journeys\n* Support tickets\n* Engineering implementations\n\n[Detailed report](#)",
     interlude: "I found something much bigger.",
     decisions: "The more I investigated, the clearer it became: we weren't facing a design consistency problem, we were facing a **platform architecture problem.**\n\nFixing the UI would treat the symptoms; redesigning the underlying experience architecture would solve the cause.",
     redefining: "This changed the entire direction of the project.\n\nIt was time to have an honest conversation with Product and Engineering about what was really holding us back.\n\nThe conversations weren't easy. We knew this would extend the project's scope and timeline, but we also knew incremental fixes would only postpone the problem. We aligned on a bold but necessary direction:\n**Build a Modular Orchestration Platform.**",
     redefiningImage: "assets/modular approach.png",
+    redefiningImpact: "| Metric | Before | After |\n| --- | --- | --- |\n| **Design effort** | 2–3 weeks | < half day |\n| **Engineering effort** | 15 days | 6 days |\n| **Reusable modules** | 10% | 55% |",
     stakeholders: "**The hardest part was changing how the organization thought about the problem.**\n\nBefore we could build a scalable platform, we had to shift the team's mindset.\n\nTogether, we aligned on three key principles:\n* Move beyond incremental fixes.\n* Invest in a scalable platform foundation.\n* Embrace short-term complexity to unlock long-term growth.\n\nThis level of alignment was only possible through a **strong partnership between Product, Engineering, and Design.**",
     nextSteps: "Created a design system that standardized the platform through:\n* Foundation tokens\n* Semantic tokens\n* Reusable components\n* Configurable variables",
     nextStepsImages: [
@@ -50,9 +50,10 @@ const projects = [
     nextSteps2: "Instead of designing end-to-end flows, I broke the experience into reusable modules.\n\nEach module contained:\n* Happy paths\n* Error states\n* Edge cases\n* Variants\n* Merchant overrides\n* Lender overrides",
     modulesImage: "assets/KYC Module.png",
     execution: "We transformed journey creation from a design exercise into a configuration exercise.\n\nReusable modules were dynamically assembled using **Merchant Rules** (category, offers, integration type) and **Lender Rules** (partner, ETB/NTB, API/Redirect, fees, rejection logic, support details).\n\n**The outcome: New lender journeys could be configured and handed off to engineering in hours instead of weeks.**",
+    newIntegrationImage: "assets/new_integration.png",
     outputImage: "assets/output.png",
     migration: "While I focused on designing the Modular Orchestration Platform, Product and Engineering worked in parallel to define the **migration strategy.**\n\nThe transition was the most challenging phase. For a period, both the legacy and the new platform had to coexist, resulting in:\n* Fragmented customer experiences\n* Mixed UI patterns\n* Inconsistent interactions across journeys\n\nTo minimize disruption, we adopted a phased migration approach:\n* Prioritized high-impact modules first\n* Introduced progressive migration instead of a big-bang release\n* Created comprehensive design documentation and implementation guidelines to ensure consistency across teams",
-    impact: "## Business Impact\n* Reduced partner onboarding timelines from months to weeks.\n* **Accelerated time-to-revenue** by enabling faster merchant and lender launches.\n* Scaled onboarding capacity without proportionally increasing engineering effort.\n* Lowered **operational and maintenance costs** through a reusable platform architecture.\n* Strengthened Flexmoney's competitive advantage by enabling faster ecosystem expansion.\n\n## Product & Design Impact\n* Reduced design effort from **2–3 weeks to less than half a day** through configurable journeys.\n* **Reduced integration effort from 2 months to 2-3 weeks using reusable modules.**\n* Delivered a **consistent customer experience** across merchants and lending partners.\n* Increased team velocity by replacing custom implementations with configurable workflows.",
+    impact: "## Business Impact\n\n| Metric | Impact |\n| --- | --- |\n| Merchant go-live | **50% faster** |\n| Lender onboarding | **40% faster** |\n| Time-to-market | **50% faster** |\n| Integration throughput | **2×** |\n\n## Design Impact\n\n| Metric | Impact |\n| --- | --- |\n| Design effort | **2–3 weeks → <½ - 1 day** |\n| Reusable modules | **10% → 55%** |\n| Unified experience | Across channels |\n| Configurable journeys | Built once, reused everywhere |\n\n## Engineering Impact\n\n| Metric | Impact |\n| --- | --- |\n| Engineering effort | **50–60% lower** |\n| Platform-wide changes | **80% less effort** |\n| Maintenance effort | **50% lower** |\n| Engineer ramp-up | **40% faster** |",
     reflection: "I didn't just redesign a customer journey.\n\nI helped redesign the platform behind it.\n\nThis project reinforced a lesson I'll carry into every product I build:\n\n**Great designers craft experiences. Great product designers build systems that make those experiences scalable.**",
     glimpses: [],
   },
@@ -192,6 +193,21 @@ function prose(text, leadFirst) {
         items.push(lines[i].trim().replace(/^\*\s+/, "")); i++;
       }
       html += `<ul>${items.map(x => `<li>${fmt(x)}</li>`).join("")}</ul>`;
+    } else if (/^\|/.test(t)) {
+      flush();
+      const rows = [];
+      while (i < lines.length && /^\|/.test(lines[i].trim())) {
+        rows.push(lines[i].trim()); i++;
+      }
+      const parseRow = (r) => r.replace(/^\|/, "").replace(/\|$/, "").split("|").map(c => c.trim());
+      const isSeparator = (r) => /^[\s|:-]+$/.test(r) && r.includes("-");
+      const header = parseRow(rows[0]);
+      const dataRows = (rows[1] && isSeparator(rows[1]) ? rows.slice(2) : rows.slice(1)).map(parseRow);
+      html += `<div class="case-table-wrap"><table class="case-table"><thead><tr>${
+        header.map(h => `<th>${fmt(h)}</th>`).join("")
+      }</tr></thead><tbody>${
+        dataRows.map(r => `<tr>${r.map(c => `<td>${fmt(c)}</td>`).join("")}</tr>`).join("")
+      }</tbody></table></div>`;
     } else if (/^[↓→]$/.test(t)) {
       flush();
       html += `<div class="case-flow-arrow">${t}</div>`;
@@ -353,9 +369,11 @@ function renderCase(slug) {
         <div class="case-prose">${prose(p.results, true)}</div></section>` : ""}
 
       ${p.redefining ? `<section class="case-body"><h3>Redefining the problem</h3>
-        <div class="case-prose">${prose(p.redefining, false)}</div></section>` : ""}
-
-      ${p.redefiningImage ? `<img class="case-wide-img" src="${esc(p.redefiningImage.replace(/ /g, "%20"))}" alt="From rigid, custom-built integrations to a modular, configurable platform" loading="lazy"/>` : ""}
+        <div class="case-prose">
+          ${prose(p.redefining, false)}
+          ${p.redefiningImage ? `<img class="case-redefine-img" src="${esc(p.redefiningImage.replace(/ /g, "%20"))}" alt="From rigid, custom-built integrations to a modular, configurable platform" loading="lazy"/>` : ""}
+          ${p.redefiningImpact ? `<h4 class="case-subhead">Projected impact</h4>${prose(p.redefiningImpact, false)}` : ""}
+        </div></section>` : ""}
 
       ${p.stakeholders ? `<section class="case-body"><h3>Stakeholders</h3>
         <div class="case-prose">${prose(p.stakeholders, false)}</div></section>` : ""}
@@ -374,9 +392,9 @@ function renderCase(slug) {
       ${p.execution ? `<section class="case-body"><h3>Execution</h3>
         <div class="case-prose">${prose(p.execution, false)}</div></section>` : ""}
 
-      ${p.overviewImage ? `<img class="case-wide-img" data-zoom src="${esc(p.overviewImage.replace(/ /g, "%20"))}" alt="Multiple customer touchpoints — embedded checkout, in-store, assisted telecaller and EMI affordability widget" loading="lazy"/>` : ""}
+      ${p.newIntegrationImage ? `<img class="case-wide-img" data-zoom src="${esc(p.newIntegrationImage.replace(/ /g, "%20"))}" alt="New integration flow" loading="lazy"/>` : ""}
 
-      ${p.outputImage ? `<img class="case-wide-img" data-zoom src="${esc(p.outputImage.replace(/ /g, "%20"))}" alt="After — unified EMI plan experience across embedded checkout, in-store, assisted telecaller and EMI affordability widget" loading="lazy"/>` : ""}
+      ${p.overviewImage ? `<img class="case-wide-img" data-zoom src="${esc(p.overviewImage.replace(/ /g, "%20"))}" alt="Multiple customer touchpoints — embedded checkout, in-store, assisted telecaller and EMI affordability widget" loading="lazy"/>` : ""}
 
       ${p.migration ? `<section class="case-body"><h3>Migration Challenge</h3>
         <div class="case-prose">${prose(p.migration, false)}</div></section>` : ""}
@@ -390,6 +408,8 @@ function renderCase(slug) {
         <div class="case-prose">${prose(p.reflection, false)}</div></section>
 
       ${p.glimpses && p.glimpses.length ? `<div class="case-glimpses">${p.glimpses.map(g => `<img src="${esc(g)}" alt="Glimpse of work" loading="lazy"/>`).join("")}</div>` : ""}
+
+      ${p.outputImage ? `<hr class="case-hr"/><img class="case-wide-img" data-zoom src="${esc(p.outputImage.replace(/ /g, "%20"))}" alt="After — unified EMI plan experience across embedded checkout, in-store, assisted telecaller and EMI affordability widget" loading="lazy"/>` : ""}
 
       <a class="case-next" href="#/work/${esc(next.slug)}">
         <div><div class="cn-label">Next project</div><div class="cn-title">${esc(next.title)}</div></div>
@@ -425,6 +445,30 @@ function observeReveals() {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
   }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
   document.querySelectorAll(".reveal:not(.in)").forEach(el => io.observe(el));
+}
+
+/* ===================== Theme (dark mode pull switch) ===================== */
+// Colors cross-fade via the plain CSS transition already on body/nav/etc.
+// in styles.css — no extra JS-driven transition effect.
+function initThemeToggle() {
+  const root = document.documentElement;
+  const btn = $("#themeToggle");
+  if (!btn) return;
+
+  const applyTheme = (theme) => {
+    root.setAttribute("data-theme", theme);
+    btn.setAttribute("aria-pressed", String(theme === "dark"));
+  };
+  applyTheme(root.getAttribute("data-theme") === "dark" ? "dark" : "light");
+
+  btn.addEventListener("click", () => {
+    const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    btn.classList.add("pulled");
+    setTimeout(() => btn.classList.remove("pulled"), 220);
+
+    applyTheme(next);
+    localStorage.setItem("theme", next);
+  });
 }
 
 /* ===================== Nav ===================== */
@@ -567,6 +611,7 @@ function initLightbox() {
 /* ===================== Boot ===================== */
 document.addEventListener("DOMContentLoaded", () => {
   renderHome();
+  initThemeToggle();
   initNav();
   initLightbox();
   route();
